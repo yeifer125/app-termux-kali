@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Actualización a MaterialComponents para soportar TextInputLayout -->
+    <style name="Theme.KALI" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Personalización opcional de colores para modo hacker -->
+        <item name="colorPrimary">#00BCD4</item>
+        <item name="colorPrimaryVariant">#0097A7</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:statusBarColor">#000000</item>
+    </style>
+</resources>

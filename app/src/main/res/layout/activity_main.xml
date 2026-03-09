@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0A">
+
+    <!-- PANTALLA DE LOGIN -->
+    <ScrollView
+        android:id="@+id/loginScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- CONTENEDOR PARA EL ARTE ASCII DISENADO -->
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                android:background="#000000"
+                android:scrollbars="none">
+
+                <TextView
+                    android:id="@+id/asciiArtText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textColor="#00FF00"
+                    android:textSize="9sp"
+                    android:typeface="monospace"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.02"
+                    android:lineSpacingMultiplier="0.8"
+                    android:breakStrategy="simple" />
+            </HorizontalScrollView>
+
+            <!-- TEXTO DE ESTADO SOLICITADO -->
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:textColor="#00FF00"
+                android:textSize="14sp"
+                android:lineSpacingExtra="6dp"
+                android:typeface="monospace" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="SISTEMA DE ACCESO"
+                app:passwordToggleEnabled="true"
+                app:hintTextColor="#00BCD4"
+                app:boxStrokeColor="#00BCD4"
+                android:textColorHint="#666666"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="#FFFFFF" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/rememberCheckbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Recordar credenciales"
+                android:textColor="#AAAAAA"
+                android:buttonTint="#00BCD4" />
+
+            <Button
+                android:id="@+id/connectButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:text="INICIALIZAR UPLINK"
+                android:textStyle="bold"
+                android:backgroundTint="#00BCD4" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- PANTALLA DE TERMINAL -->
+    <com.termux.view.TerminalView
+        android:id="@+id/terminalView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:clickable="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
