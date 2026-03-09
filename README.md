@@ -105,7 +105,7 @@ Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE](LICENSE) pa
 
 ## 👤 Autor
 
-**yeifer125** - *Desarrollador Principal*
+**cArbonAto** - *Desarrollador Principal*
 
 ## 🙏 Agradecimientos
 
